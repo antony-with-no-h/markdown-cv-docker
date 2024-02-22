@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+
+apt update
+apt install -y ca-certificates wget make gpg
+
+wget -qO - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor > /usr/share/keyrings/google-chrome-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] https://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list
+
+apt update
+apt install -y google-chrome-stable
+
+apt get clean
+
+PANDOC=$(ghlatest jgm pandoc "pandoc-[\d\.]+-linux-amd64.tar.gz")
+wget -O /tmp/pandoc.tgz ${PANDOC}
+tar xzf /tmp/pandoc.tgz --strip-components 1 --one-top-level=pandoc -C /opt
+
+rm -f /tmp/pandoc.tgz

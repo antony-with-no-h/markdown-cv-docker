@@ -1,0 +1,55 @@
+body {
+    --text-size-80: 0.79rem;
+    --text-size-90: 0.889rem;
+    --text-size-100: 1rem;
+    --text-size-200: 1.125rem;
+    --text-size-300: 1.266rem;
+    --text-size-400: 1.424rem;
+    --text-size-500: 1.602rem;
+    --text-size-600: 1.802rem;
+    --text-size-700: 2.027rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6;
+    padding: 1em;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+}
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+small {
+  font-size: var(--text-size-90);
+}
+h6, .h6 {
+  font-size: var(--text-size-200);
+}
+h5, .h5 {
+  font-size: var(--text-size-300);
+}
+h4, .h4 {
+  font-size: var(--text-size-400);
+}
+h3, .h3 {
+  font-size: var(--text-size-500);
+}
+h2, .h2 {
+  font-size: var(--text-size-600);
+  border-bottom: 1px solid black;
+}
+h1, .h1 {
+  font-size: var(--text-size-700);
+  text-align: center;
+}
+
+#technical-skills, #certifications {
+    font-size: var(--text-size-400);
+}
+
