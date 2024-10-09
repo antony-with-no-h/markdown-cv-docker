@@ -22,6 +22,5 @@ ENV PATH=/opt/pandoc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin
 ADD bin/setup /root/bin/setup
 RUN setup 
 
-USER 1000:1000
 WORKDIR /cv
 ENTRYPOINT ["make"]
